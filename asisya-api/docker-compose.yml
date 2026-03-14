@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: asisya-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: asisya_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # docker-compose.yml
+api:
+  build: .
+  container_name: asisya-api
+  depends_on:
+    - postgres
+  ports:
+    - "8080:8080"
+  environment:
+    ConnectionStrings__Default: Host=postgres;Port=5432;Database=asisya_db;Username=postgres;Password=123456
+  command: >
+    sh -c "until pg_isready -h postgres -p 5432; do echo waiting for db; sleep 2; done; dotnet asisya-api.dll"
+
+volumes:
+  postgres_data:

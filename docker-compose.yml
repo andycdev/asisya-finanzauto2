@@ -1,0 +1,41 @@
+services:
+  frontend:
+    build:
+      context: ./asisya-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_started
+
+  backend:
+    build:
+      context: ./asisya-api
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+      - ConnectionStrings__Default=Host=db;Port=5432;Database=asisya_db;Username=postgres;Password=123456
+    depends_on:
+      db:
+        condition: service_healthy # Espera a que la DB esté REALMENTE lista
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: asisya_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck: # Esta es la clave
+      test: ["CMD-SHELL", "pg_isready -U postgres -d asisya_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:

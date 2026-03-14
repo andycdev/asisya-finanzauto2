@@ -1,0 +1,16 @@
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\asisya-api.exe
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\asisya-api.dll
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\Npgsql.dll
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\felip\Documentos\Pruebas\asisya2\asisya-api\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
