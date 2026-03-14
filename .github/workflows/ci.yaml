@@ -17,9 +17,10 @@ jobs:
         with:
           dotnet-version: '8.0.x'
       - name: Restore dependencies
-        run: dotnet restore ./backend/*.csproj
+        # Cambiado de ./backend/ a ./asisya-api/
+        run: dotnet restore ./asisya-api/*.csproj
       - name: Build Backend
-        run: dotnet build ./backend/*.csproj --no-restore --configuration Release
+        run: dotnet build ./asisya-api/*.csproj --no-restore --configuration Release
 
   # 2. Validar el Frontend (React)
   build-frontend:
@@ -31,16 +32,17 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
+          # Aseguramos que apunte a la carpeta correcta
           cache-dependency-path: './asisya-frontend/package-lock.json'
       - name: Install dependencies
         run: npm install --prefix ./asisya-frontend
       - name: Build Frontend
         run: npm run build --prefix ./asisya-frontend
 
-  # 3. Validar que Docker puede construir las imágenes
+  # 3. Validar Docker
   docker-build-test:
     runs-on: ubuntu-latest
-    needs: [build-backend, build-frontend] # Solo corre si los pasos anteriores pasaron
+    needs: [build-backend, build-frontend]
     steps:
       - uses: actions/checkout@v4
       - name: Build images with Docker Compose
