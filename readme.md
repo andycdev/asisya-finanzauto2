@@ -57,7 +57,6 @@ docker-compose up --build
 | ---------------------- | -------------------------------------------------------------- |
 | **Frontend (React)**   | [http://localhost:3000](http://localhost:3000)                 |
 | **Backend (API)**      | [http://localhost:5000](http://localhost:5000)                 |
-| **Swagger UI**         | [http://localhost:5000/swagger](http://localhost:5000/swagger) |
 | **Base de Datos (PG)** | Puerto `5432`                                                  |
 
 # 🔐 Requerimientos de Seguridad e Interfaz
